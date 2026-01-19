@@ -17,14 +17,14 @@ export default function Header() {
   }, [])
 
   const getProfileImage = () => {
-    if (!mounted) return '/images/newprofile.jpg'
+    if (!mounted) return '/images/2x2.webp' // Placeholder while mounting
     
     const isDark = theme === 'dark'
     
     if (isDark) {
-      return isHovered ? '/images/nightnewprofile-laugh.png' : '/images/nightnewprofile.png'
+      return isHovered ? '/images/2x2.webp' : '/images/2x2.webp'
     } else {
-      return isHovered ? '/images/morningnewprofile-laugh.png' : '/images/newprofile.jpg'
+      return isHovered ? '/images/2x2.webp' : '/images/2x2.webp'
     }
   }
 
@@ -46,7 +46,7 @@ export default function Header() {
             >
               <Image
                 src={getProfileImage()}
-                alt="John Carlo Gamayo"
+                alt="Leynard Drake Hernandez"
                 width={96}
                 height={96}
                 className="w-full h-full object-cover transition-opacity duration-300"
@@ -59,12 +59,12 @@ export default function Header() {
           <div className="flex-grow">
             <div className="flex items-start justify-between flex-wrap gap-4">
               <div>
-                <h1 className="text-4xl font-bold">John Carlo Gamayo</h1>
+                <h1 className="text-4xl font-bold">Leynard Drake Hernandez</h1>
                 <p className="text-muted-foreground flex items-center gap-2 mt-1">
                   <MapPin size={16} />
-                  Pandi, Bulacan, Philippines
+                  Pulilan, Bulacan, Philippines
                 </p>
-                <p className="text-lg text-foreground mt-2">Full-Stack Developer</p>
+                <p className="text-lg text-foreground mt-2">Web Development / Project Management</p>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ export default function Header() {
                 variant="default" 
                 size="sm"
                 className="gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                onClick={() => window.open('/johncarlo-resume.pdf', '_blank')}
+                onClick={() => window.open('/Leynard_Drake_Hernandez_Resume', '_blank')}
               >
                 <Download size={16} />
                 Download Resume
@@ -99,15 +99,15 @@ export default function Header() {
 
             {/* Contact Info */}
             <div className="flex flex-wrap gap-4 mt-4 text-sm text-muted-foreground">
-              <a href="mailto:johncarlogamayo@gmail.com" className="hover:text-foreground transition">
-                johncarlogamayo@gmail.com
+              <a href="mailto:leynarddrakehernandez@gmail.com" className="hover:text-foreground transition">
+                leynarddrakehernandez@gmail.com
               </a>
               <span>•</span>
               <a href="tel:+6391135290" className="hover:text-foreground transition">
                 +63 911 352 90
               </a>
               <span>•</span>
-              <a href="https://johncarlogamayo.netlify.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition">
                 Portfolio Website
               </a>
             </div>

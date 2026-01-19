@@ -10,32 +10,20 @@ import { useState } from 'react'
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
 
-  const projects = [
-    {
-      title: "CyberZone E-commerce Website",
-      description: "Designed modern UI for product management, order tracking, and inventory updates. Implemented dynamic frontend components for smooth user experience.",
-      image: "/project-images/cyberzone.jpg",
-      link: "#"
-    },
-    {
-      title: "PC Bulacan E-commerce System",
-      description: "Developed full shopping cart and checkout system with deals engine. Integrated AI chat support for customer assistance.",
-      image: "/project-images/pcbulacan.png",
-      link: "#"
-    },
-    {
-      title: "DriveWise Gamified Learning App",
-      description: "Created a driving simulation mobile app to teach practical driving skills. Implemented interactive gameplay with realistic vehicle physics. Published on Google Play Store.",
-      image: "/project-images/drivewise.png",
-      link: "#"
-    },
-    {
-      title: "Bigbrew Online Coffee Management System",
-      description: "Developed system to manage orders, products, and inventory with modern UI. Built backend order tracking and reporting features for admin dashboard.",
-      image: "/project-images/bigbrew.jpg",
-      link: "#"
-    }
-  ]
+    const projects = [
+      {
+        title: "AR Campus Navigation System (Capstone Project)",
+    description: "Developed an augmented reality campus navigation application using Unity and AR Foundation. Implemented indoor pathfinding with NavMesh, QR-based recentering, and Firebase Firestore for dynamic destination data.",
+    image: "/project-images/ar-campus.jpg",
+    link: "https://navigatemycampus.capstone-two.com/"
+      },
+      {
+        title: "Bigbrew Online Coffee Management System (Pinagbarilan, Baliuag, Bulacan)",
+        description: "Developed system to manage orders, products, and inventory with modern UI. Built backend order tracking and reporting features for admin dashboard.",
+        image: "/project-images/bigbrew.jpg",
+        link: "https://bigbrewtarcan.capstone-two.com/"
+      }
+    ]
 
   return (
     <section>

@@ -12,10 +12,10 @@ export default function Education() {
       details: ""
     },
     {
-      degree: "Information and Communication Technology",
-      school: "Immaculate Conception Polytechnic",
+      degree: "General Academic Strand",
+      school: "Academia de Pulilan Inc.",
       period: "Completed 2022",
-      details: "Best Capstone Project Award, with honor"
+      details: ""
     }
   ]
 
