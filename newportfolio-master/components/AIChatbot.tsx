@@ -1,0 +1,192 @@
+'use client'
+
+import { useState, useRef, useEffect } from 'react'
+import { MessageCircle, X, Send, Bot } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+
+interface Message {
+  text: string
+  isBot: boolean
+  timestamp: Date
+}
+
+// Knowledge base about John Carlo Gamayo
+const knowledgeBase: { [key: string]: string } = {
+  name: "I'm Leynard Drake Hernandez, a BS Information Technology student specializing in Web and Mobile Development based in Bulacan, Philippines.",
+skills: "I work with HTML, CSS, JavaScript, PHP, MySQL, and Unity. I also have experience using Firebase, AR Foundation, and project management tools like Monday.com.",
+location: "I'm based in Bulacan, Philippines.",
+contact: "You can reach me via email or connect with me through my portfolio and LinkedIn for project inquiries and opportunities.",
+experience: "I have hands-on experience through academic projects and my internship as a Project Management Intern at Lightweight Solutions, where I assist in coordinating website projects, preparing documentation, and supporting QA and maintenance tasks.",
+education: "I'm currently completing my Bachelor of Science in Information Technology, with a focus on Web and Mobile Development.",
+projects: "My projects include an AR-based campus navigation system developed with Unity and Firebase, as well as multiple web development projects featuring admin panels, CRUD systems, and responsive user interfaces.",
+tech: "I work with technologies such as HTML, CSS, JavaScript, PHP, MySQL, Unity, AR Foundation, Firebase, and Git/GitHub.",
+availability: "I'm open to internships, entry-level roles, and project-based opportunities. Feel free to reach out if you'd like to collaborate.",
+resume: "You can download my resume using the 'Download Resume' button available on this website.",
+default: "I'm Leynard Drake Hernandez, an IT student and aspiring web and mobile developer. I can answer questions about my projects, internship experience, skills, and background. Feel free to ask!"
+
+}
+
+function findBestMatch(input: string): string {
+  const lowerInput = input.toLowerCase()
+  
+  // Keywords mapping
+  const keywords: { [key: string]: string[] } = {
+    name: ['name', 'who are you', 'introduce', 'about you'],
+    skills: ['skill', 'technology', 'tech stack', 'programming', 'code', 'development'],
+    location: ['location', 'where', 'live', 'based'],
+    contact: ['contact', 'email', 'phone', 'reach', 'call'],
+    experience: ['experience', 'work', 'job', 'career'],
+    education: ['education', 'school', 'study', 'degree'],
+    projects: ['project', 'portfolio', 'work', 'built', 'created'],
+    tech: ['technology', 'tools', 'framework', 'language'],
+    availability: ['available', 'hire', 'hiring', 'freelance', 'work'],
+    resume: ['resume', 'cv', 'download'],
+  }
+
+  for (const [key, words] of Object.entries(keywords)) {
+    if (words.some(word => lowerInput.includes(word))) {
+      return knowledgeBase[key]
+    }
+  }
+
+  return knowledgeBase.default
+}
+
+export default function AIChatbot() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      text: "Hi! 👋 I'm an AI assistant that can answer questions about John Carlo Gamayo. What would you like to know?",
+      isBot: true,
+      timestamp: new Date(),
+    },
+  ])
+  const [input, setInput] = useState('')
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight
+    }
+  }, [messages])
+
+  const handleSend = () => {
+    if (!input.trim()) return
+
+    const userMessage: Message = {
+      text: input,
+      isBot: false,
+      timestamp: new Date(),
+    }
+
+    setMessages(prev => [...prev, userMessage])
+    setInput('')
+
+    // Simulate thinking time
+    setTimeout(() => {
+      const response = findBestMatch(input)
+      const botMessage: Message = {
+        text: response,
+        isBot: true,
+        timestamp: new Date(),
+      }
+      setMessages(prev => [...prev, botMessage])
+    }, 500)
+  }
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSend()
+    }
+  }
+
+  return (
+    <>
+      {/* Floating Chat Button */}
+      {!isOpen && (
+        <Button
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-2xl z-50 transition-all duration-300 hover:scale-110 hover:shadow-xl"
+          size="icon"
+        >
+          <MessageCircle className="h-6 w-6" />
+        </Button>
+      )}
+
+      {/* Chat Window */}
+      {isOpen && (
+        <div className="fixed bottom-6 right-6 w-96 h-[500px] bg-background border border-border rounded-lg shadow-2xl z-50 flex flex-col animate-in slide-in-from-bottom-5">
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b border-border bg-primary/5">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Bot className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-sm">AI Assistant</h3>
+                <p className="text-xs text-muted-foreground">Ask me about John Carlo</p>
+              </div>
+            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(false)}
+              className="h-8 w-8"
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          </div>
+
+          {/* Messages */}
+          <div className="flex-1 overflow-y-auto p-4 scroll-smooth" ref={scrollRef} style={{ scrollBehavior: 'smooth' }}>
+            <div className="space-y-4 pb-4">
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
+                >
+                  <div
+                    className={`max-w-[80%] rounded-lg p-3 ${
+                      message.isBot
+                        ? 'bg-primary/10 text-foreground'
+                        : 'bg-primary text-primary-foreground'
+                    } transition-all duration-300 hover:scale-105`}
+                  >
+                    <p className="text-sm">{message.text}</p>
+                    <p className="text-xs opacity-50 mt-1">
+                      {message.timestamp.toLocaleTimeString([], {
+                        hour: '2-digit',
+                        minute: '2-digit',
+                      })}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Input */}
+          <div className="p-4 border-t border-border">
+            <div className="flex gap-2">
+              <Input
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Ask me anything..."
+                className="flex-1"
+              />
+              <Button
+                onClick={handleSend}
+                size="icon"
+                className="transition-all duration-300 hover:scale-110"
+              >
+                <Send className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
