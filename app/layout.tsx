@@ -9,7 +9,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'John Carlo Gamayo - Full-Stack Developer',
+  title: 'Leynard Drake Hernandez - Web Developer / Project Manager',
   description: 'Full-stack developer portfolio showcasing web applications, projects, and technical expertise in TypeScript, React, Node.js, and Python.',
   generator: 'v0.app',
   keywords: ['Full-Stack Developer', 'Web Developer', 'React', 'TypeScript', 'Node.js', 'Python'],

@@ -11,7 +11,7 @@ interface Message {
   timestamp: Date
 }
 
-// Knowledge base about John Carlo Gamayo
+// Knowledge base about 
 const knowledgeBase: { [key: string]: string } = {
   name: "I'm Leynard Drake Hernandez, a BS Information Technology student specializing in Web and Mobile Development based in Bulacan, Philippines.",
 skills: "I work with HTML, CSS, JavaScript, PHP, MySQL, and Unity. I also have experience using Firebase, AR Foundation, and project management tools like Monday.com.",
@@ -57,7 +57,7 @@ export default function AIChatbot() {
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: "Hi! 👋 I'm an AI assistant that can answer questions about John Carlo Gamayo. What would you like to know?",
+      text: "Hi! 👋 I'm an AI assistant that can answer questions about  What would you like to know?",
       isBot: true,
       timestamp: new Date(),
     },
