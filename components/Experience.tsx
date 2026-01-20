@@ -6,16 +6,10 @@ import { Card } from '@/components/ui/card'
 export default function Experience() {
   const experiences = [
     {
-      title: "Software Developer Intern",
-      company: "Lightweight Global Tech Solution Corp.",
-      date: "2025 - Present",
-      description: "Develop and maintain full-stack web applications using TypeScript and Python. Integrate third-party APIs and implement OCR solutions."
-    },
-    {
-      title: "Bachelor of Science in Information Technology",
-      company: "Bulacan State University",
-      date: "4th Year (Ongoing)",
-      description: "With honor. Best Capstone project award."
+      title: "Project Management Intern",
+      company: "Lightweight Solutions",
+      date: "2025 – Present",
+      description: "Assist in coordinating and monitoring website development projects. Prepare project documentation including Minutes of Meeting (MoM), Design Sign-off, and UAT Sign-off. Track tasks and updates using Monday.com. Support website quality checks, deployment coordination, and maintenance reporting."
     },
   ]
 

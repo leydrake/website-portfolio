@@ -7,15 +7,9 @@ export default function Education() {
   const education = [
     {
       degree: "Bachelor of Science in Information Technology",
-      school: "Bulacan State University",
-      period: "4th Year, Ongoing",
-      details: ""
-    },
-    {
-      degree: "General Academic Strand",
-      school: "Academia de Pulilan Inc.",
-      period: "Completed 2022",
-      details: ""
+      school: "Bulacan State University – Bustos Campus",
+      period: "4th Year (Ongoing)",
+      details: "Specialization in Web and Mobile Development. Capstone Project: AR-Based Campus Navigation System using Unity and Firebase"
     }
   ]
 

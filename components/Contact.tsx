@@ -59,14 +59,14 @@ export default function Contact() {
         </div>
         
         <div className="flex gap-2">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="sm"
             className="flex-1 gap-2 h-9 bg-transparent"
             asChild
           >
-            <a 
-              href="https://github.com"
+            <a
+              href="https://github.com/leydrake"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -74,14 +74,14 @@ export default function Contact() {
               GitHub
             </a>
           </Button>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="sm"
             className="flex-1 gap-2 h-9 bg-transparent"
             asChild
           >
-            <a 
-              href="https://linkedin.com"
+            <a
+              href="https://www.linkedin.com/in/leynard-drake-hernandez-b49ab8378/"
               target="_blank"
               rel="noopener noreferrer"
             >
