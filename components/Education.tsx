@@ -9,7 +9,7 @@ export default function Education() {
       degree: "Bachelor of Science in Information Technology",
       school: "Bulacan State University – Bustos Campus",
       period: "4th Year (Ongoing)",
-      details: "Specialization in Web and Mobile Development. Capstone Project: AR-Based Campus Navigation System using Unity and Firebase"
+      details: "Specialization in Web and Mobile Development. Dean Lister and Class President. Capstone Project: AR-Based Campus Navigation System using Unity and Firebase"
     }
   ]
 

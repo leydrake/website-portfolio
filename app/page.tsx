@@ -68,7 +68,7 @@ export default function Home() {
         <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
         <div className="py-8 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-muted-foreground">
-            <p className="animate-in fade-in duration-1000">© 2025 John Carlo Gamayo. All rights reserved.</p>
+            <p className="animate-in fade-in duration-1000">© 2026 Leynard Drake Hernandez. All rights reserved.</p>
           </div>
         </div>
       </footer>

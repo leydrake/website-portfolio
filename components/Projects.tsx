@@ -14,11 +14,11 @@ export default function Projects() {
       {
         title: "AR Campus Navigation System (Capstone Project)",
     description: "Developed an augmented reality campus navigation application using Unity and AR Foundation. Implemented indoor pathfinding with NavMesh, QR-based recentering, and Firebase Firestore for dynamic destination data.",
-    image: "/project-images/ar-campus.jpg",
+    image: "/project-images/navigatemycampuspng.webp",
     link: "https://navigatemycampus.capstone-two.com/"
       },
       {
-        title: "Bigbrew Online Coffee Management System (Pinagbarilan, Baliuag, Bulacan)",
+        title: "Bigbrew Online Coffee Management System (Baliuag, Bulacan)",
         description: "Developed system to manage orders, products, and inventory with modern UI. Built backend order tracking and reporting features for admin dashboard.",
         image: "/project-images/bigbrew.jpg",
         link: "https://bigbrewtarcan.capstone-two.com/"
