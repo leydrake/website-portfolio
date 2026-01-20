@@ -6,33 +6,25 @@ import { Card } from '@/components/ui/card'
 export default function TechStack() {
   const techStacks = [
     {
-      category: "💻 Programming & Web Development",
-      tech: [
-        ["HTML", "CSS"],
-        ["CSS", "JavaScript"],
-        ["JavaScript", "Java"],
-        ["Java", "C++"],
-        ["C++", "C#"],
-        ["C#", "PHP"],
-        ["PHP", "MySQL"],
-        ["MySQL", "Firebase"],
-        ["Firebase", "Android Studio"]
-      ]
+      category: "Frontend",
+      tech: ["HTML", "CSS", "JavaScript"]
     },
     {
-      category: "🎨 Design & Multimedia",
-      tech: [
-        ["Photoshop", "Illustrator"],
-        ["Illustrator", "Premiere"],
-        ["Premiere", "Canva"],
-        ["Canva", "Figma"]
-      ]
+      category: "Backend",
+      tech: ["PHP", "MySQL", "Firebase, "] 
+    },
+  
+    {
+      category: "Mobile Development",
+      tech: ["Android Studio, Unity (C#)"] 
     },
     {
-      category: "🗂️ Productivity Tools",
-      tech: [
-        ["Word", "PowerPoint"]
-      ]
+      category: "Design & UI/UX",
+      tech: ["Figma", "Canva", "Adobe Photoshop", "Adobe Illustrator"]
+    },
+    {
+      category: "Productivity & Collaboration",
+      tech: ["Microsoft Word", "Microsoft PowerPoint", "Monday.com", "Git/GitHub"]
     }
   ]
 
@@ -51,18 +43,14 @@ export default function TechStack() {
         {techStacks.map((stack, idx) => (
           <Card key={idx} className="p-6 interactive-card bg-card/80 backdrop-blur-sm border-border/50 hover:border-primary/50 rounded-xl hover:shadow-xl hover:shadow-primary/5 group">
             <h3 className="font-bold text-lg text-foreground mb-4 group-hover:text-primary transition-colors">{stack.category}</h3>
-            <div className="space-y-2">
-              {stack.tech.map((pair, i) => (
-                <div key={i} className="grid grid-cols-2 gap-2">
-                  {pair.map((tech, j) => (
-                    <span
-                      key={j}
-                      className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-full text-center transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-primary-foreground cursor-pointer"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+            <div className="flex flex-wrap gap-2">
+              {stack.tech.map((item, i) => (
+                <span 
+                  key={i}
+                  className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-full transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-primary-foreground cursor-pointer"
+                >
+                  {item}
+                </span>
               ))}
             </div>
           </Card>

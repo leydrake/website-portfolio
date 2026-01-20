@@ -103,8 +103,8 @@ export default function Header() {
                 leynarddrakehernandez@gmail.com
               </a>
               <span>•</span>
-              <a href="tel:+6391135290" className="hover:text-foreground transition">
-                +63 911 352 90
+              <a href="tel:+639770978328" className="hover:text-foreground transition">
+                +63 977 097 8328
               </a>
               <span>•</span>
               <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition">

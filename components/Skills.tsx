@@ -15,11 +15,11 @@ export default function Skills() {
     },
     {
       category: "Tools & Version Control",
-      items: ["Git", "GitHub", "Figma", "Canva", "VS Code", "Postman"]
+      items: ["Git", "GitHub", "Figma", "Canva", "VS Code", "Monday.com"]
     },
     {
       category: "Specializations",
-      items: ["System Architecture", "API Integration", "OCR", "AI Integration", "Debugging & Testing", "UI/UX Design"]
+      items: ["System Architecture", "API Integration", "Debugging & Testing", "UI/UX Design"]
     }
   ]
 

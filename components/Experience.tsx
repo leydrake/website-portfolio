@@ -5,12 +5,13 @@ import { Card } from '@/components/ui/card'
 
 export default function Experience() {
   const experiences = [
-    {
-      title: "Project Management Intern",
-      company: "Lightweight Solutions",
-      date: "2025 – Present",
-      description: "Assist in coordinating and monitoring website development projects. Prepare project documentation including Minutes of Meeting (MoM), Design Sign-off, and UAT Sign-off. Track tasks and updates using Monday.com. Support website quality checks, deployment coordination, and maintenance reporting."
-    },
+  {
+  title: "Project Management Intern",
+  company: "Lightweight Solutions",
+  date: "2025 – Present",
+  description: "Gaining hands-on experience in project coordination within a professional web development environment, contributing to structured workflows, clear communication, and the successful delivery of client-facing digital projects."
+},
+
   ]
 
   return (
