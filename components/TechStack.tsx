@@ -11,7 +11,7 @@ export default function TechStack() {
     },
     {
       category: "Backend",
-      tech: ["PHP", "MySQL", "Firebase, "] 
+      tech: ["PHP", "MySQL", "Firebase, Python"] 
     },
   
     {
