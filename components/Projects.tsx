@@ -14,7 +14,7 @@ export default function Projects() {
       {
         title: "AR Campus Navigation System (Capstone Project)",
     description: "Developed an augmented reality campus navigation application using Unity and AR Foundation. Implemented indoor pathfinding with NavMesh, QR-based recentering, and Firebase Firestore for dynamic destination data.",
-        image: "/project-images/navigatemycampuspng.webp",
+        image: "/project-images/navigatemycampuspng.png",
     link: "https://navigatemycampus.capstone-two.com/"
       },
       {

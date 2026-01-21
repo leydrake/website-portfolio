@@ -70,11 +70,18 @@ export default function Header() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-3 mt-6">
-              <Button 
-                variant="default" 
+              <Button
+                variant="default"
                 size="sm"
                 className="gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                onClick={() => window.open('/Leynard_Drake_Hernandez_Resume', '_blank')}
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Leynard_Drake_Hernandez_Resume.pdf';
+                  link.download = 'Leynard_Drake_Hernandez_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
                 <Download size={16} />
                 Download Resume

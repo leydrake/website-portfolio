@@ -1,6 +1,6 @@
 'use client'
 
-import { BookOpen, Award } from 'lucide-react'
+import { BookOpen, Award, ExternalLink } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 
 export default function Education() {
@@ -49,13 +49,16 @@ export default function Education() {
           <Card key={idx} className="p-6 bg-card/80 backdrop-blur-sm border-border/50 hover:border-primary/50 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 group">
             {cert.link ? (
               <a href={cert.link} target="_blank" rel="noopener noreferrer" className="block">
-                <h3 className="font-bold text-foreground text-sm hover:text-primary transition-colors cursor-pointer">{cert.name}</h3>
+                <div className="flex items-center gap-1">
+                  <h3 className="font-bold text-foreground text-sm hover:text-primary transition-colors cursor-pointer">{cert.name}</h3>
+                  <ExternalLink size={12} className="text-muted-foreground hover:text-primary transition-colors" />
+                </div>
               </a>
             ) : (
               <h3 className="font-bold text-foreground text-sm">{cert.name}</h3>
             )}
-            <p className="text-xs text-muted-foreground mt-1">{cert.issuer}</p>
-            <div className="flex justify-between items-center mt-2">
+            <p className="text-xs text-muted-foreground mt-0.5">{cert.issuer}</p>
+            <div className="flex justify-between items-center mt-1.5">
               <p className="text-xs text-foreground font-medium">{cert.details}</p>
               <span className="text-xs text-muted-foreground">{cert.date}</span>
             </div>
