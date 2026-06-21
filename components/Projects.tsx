@@ -13,16 +13,22 @@ export default function Projects() {
     const projects = [
       {
         title: "AR Campus Navigation System (Capstone Project)",
-    description: "Developed an augmented reality campus navigation application using Unity and AR Foundation. Implemented indoor pathfinding with NavMesh, QR-based recentering, and Firebase Firestore for dynamic destination data.",
+        description: "Led the planning and execution of an AR-based campus navigation project, coordinating project activities from requirements gathering to deployment. Managed project schedules, deliverables, and team collaboration while ensuring alignment with project objectives. Facilitated project documentation, stakeholder communication, testing activities, and progress tracking to support the successful delivery of the solution.",
         image: "/project-images/navigatemycampuspng.png",
-    link: "https://navigatemycampus.capstone-two.com/"
-      },
-      {
+        link: "https://navigatemycampus.capstone-two.com/"
+        },
+        {
         title: "Bigbrew Online Coffee Management System (Baliuag, Bulacan)",
-        description: "Developed system to manage orders, products, and inventory with modern UI. Built backend order tracking and reporting features for admin dashboard.",
+        description: "Coordinated the development and implementation of an online coffee management system designed to streamline ordering, inventory management, and business operations. Managed project requirements, monitored progress, facilitated team collaboration, and supported testing and deployment activities to ensure the system met business needs and project goals.",
         image: "/project-images/bigbrew.jpg",
         link: "https://bigbrewtarcan.capstone-two.com/"
-      }
+        },
+      {
+        title: "GC3 CMS Website",
+        description: "Coordinated project activities for the Global Capability Center Council Philippines (GC3) CMS Website, supporting the project lifecycle from planning through deployment. Managed project tracking, monitored deliverables and team progress, facilitated stakeholder communication, maintained key project documentation including BRDs, WBS, and status reports, and assisted with QA, issue management, and deployment efforts. Collaborated closely with developers, designers, QA specialists, and stakeholders to ensure alignment and successful project execution.",
+        image: "/project-images/gc3-cms.png",
+        link: ""
+      },
     ]
 
   return (
