@@ -6,6 +6,34 @@ import { Card } from '@/components/ui/card'
 export default function Education() {
   const certifications = [
     {
+      name: "Project Management Professional Certificate",
+      issuer: "Google",
+      date: "Completed",
+      details: "Project planning, scheduling, risk management, stakeholder communication, Agile methodologies, and project execution",
+      link: "https://www.coursera.org/account/accomplishments/specialization/U8M1GYMTIJLC"
+    },
+    {
+      name: "PMI® Essentials: M.O.R.E. Maximizing Project Success",
+      issuer: "PMI®",
+      date: "June 2026",
+      details: "Project management fundamentals, value delivery, stakeholder engagement, and project success principles",
+      link: "https://www.credly.com/badges/c35e813f-c088-46e3-a33b-ce7ea5af2cba/linked_in?t=tgpwpv"
+    },
+    {
+      name: "Lean Six Sigma Yellow Belt",
+      issuer: "MST Connect",
+      date: "May 2026",
+      details: "Process improvement methodologies, DMAIC framework, waste reduction, and quality management principles",
+      link: null
+    },
+    {
+      name: "Certified Associate in Project Management (CAPM)® Exam Prep",
+      issuer: "Packt",
+      date: "April 2026",
+      details: "CAPM exam preparation covering predictive, Agile, and hybrid project management approaches based on PMI standards",
+      link: "https://www.coursera.org/account/accomplishments/specialization/CYIM3PBD238G"
+    },
+    {
       name: "Microsoft Azure Fundamentals (AZ-900)",
       issuer: "Microsoft",
       date: "Currently Studying",
@@ -26,13 +54,13 @@ export default function Education() {
       details: "Fundamentals of computer networking, IP addressing, and connectivity",
       link: "https://www.credly.com/badges/fb359c41-9936-4d7e-a26f-6172d962b0e4"
     }
-  ]
+  ];
 
   const education = [
     {
       degree: "Bachelor of Science in Information Technology",
       school: "Bulacan State University – Bustos Campus",
-      period: "4th Year (Ongoing)",
+      period: "2022 - 2026",
       details: "Specialization in Web and Mobile Development. Dean Lister and Class President. Capstone Project: AR-Based Campus Navigation System using Unity and Firebase"
     }
   ]

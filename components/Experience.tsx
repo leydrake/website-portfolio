@@ -8,7 +8,7 @@ export default function Experience() {
   {
   title: "Project Management Intern",
   company: "Lightweight Solutions",
-  date: "2025 – Present",
+  date: "December 2025 –  April 2026",
   description: "Gaining hands-on experience in project coordination within a professional web development environment, contributing to structured workflows, clear communication, and the successful delivery of client-facing digital projects."
 },
 
